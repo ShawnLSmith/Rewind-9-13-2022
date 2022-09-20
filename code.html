@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Shawn Smith</title>
+    <title>REWIND: A Coding Project by Shawn Smith</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
 
     <!--Favicon-->
-    <link rel="icon" type="image/png" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="./img/Rewind Project No Text.png">
 
    </style>
 </head>
@@ -31,7 +31,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
         
-        <a class="navbar-brand" href="#"><img src="img/Shawn Smith (opaque).svg" class="d-inline-block align-text-top" alt="Shawn Smith's Logo" width="30" height="24"> APP NAME</a>
+        <a class="navbar-brand" href="#"><img src="./img/Rewind Project No Text.png" class="d-inline-block align-text-top" alt="Shawn Smith's Logo" width="30" height="24"> REWIND</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,22 +65,55 @@
 <!--=== Main Section ===-->
 <main class="flex-shrink-0">
     <div class="container py-5 px-5 mt-5">
-        <h2 class="border-1 border-bottom border-dark">The Code for APP NAME</h2>
+        <h2 class="border-1 border-bottom border-dark">The Code for REWIND</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2">
-            <div class="col-lg-8">
+            <div class="col-lg-8">                
                 <pre class="line-numbers"><code class="language-javascript">
-                    //Call HelloWorld
-                    function HelloWorld()
-                    {
-                        alert("Hello World");
-                    }
+//Get Values of the string from the textbox
+//controller function
+function getValue(){
+
+    document.getElementById("alert").classList.add("invisible");
+
+    let userString = document.getElementById("userString").value;
+
+    let revString = reverseString(userString);
+
+    displayString(revString);
+}
+//Reverse the string
+//logic function
+function reverseString(userString){
+
+    let revString = [];   
+   
+    //reverse a sting using a for loop
+    for (let index = userString.length -1 ; index >= 0; index--) {
+        
+        revString += userString[index];        
+    }
+
+    return revString;
+}
+//Display the reversed string to the user
+//view function
+function displayString(revString){
+
+    //write message to the page
+    document.getElementById("msg").innerHTML = `Your string reversed is: ${revString} ` ;
+
+    //show alert box
+    document.getElementById("alert").classList.remove("invisible");
+}
                 </code>
                 </pre>
             </div>
             <div class="col-lg-4">
-                <p>The Code is structured in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function that displays an alert with a message of "Hello World".</p>
+                <p>The Code for rewind is structured in Three functions.</p>
+                <h3>REWIND</h3>
+                <p><h4>getValue</h4> </p>
+                <p><h4>reverseString</h4></p>
+                <p><h4>displayString</h4></p>
             </div>
         </div>
     </div>
@@ -99,7 +132,7 @@
 
             <!--Logo-->
             <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
-                <img src="./img/Shawn Smith (opaque).svg" alt="Shawn Smith Logo" height="24">
+                <img src="./img/Rewind Project No Text.png" alt="Shawn Smith Logo" height="24">
             </div>
 
             <!--Social Icons-->
